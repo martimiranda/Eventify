@@ -1,45 +1,120 @@
-/* CSS RESET */
+/* Index.html 
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+header */
+#bodyIndex header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 0px 20px;
+    padding: 15px;
+    background-color: #171616;
+    color: white;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+#bodyIndex header a {
+    text-decoration: none;
+    color: white;
 }
-body {
-	line-height: 1;
+
+/* footer */
+#bodyIndex footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar el footer exactamente en el centro */
+    width: 100%;
+    background-color: #171616;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
-ol, ul {
-	list-style: none;
+
+#bodyIndex footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
 }
-blockquote, q {
-	quotes: none;
+
+#bodyIndex footer ul li {
+    display: inline-block;
+    font-size: 12px;
+    white-space: nowrap;
+    margin: 0 10px;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+#bodyIndex footer a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+/* Home */
+#home {
+    margin: 10px;
+}
+
+#home > div {
+    margin: 30px 10px;
+}
+
+#nextEvents h2, #nextEvents div, #nextEvents p {
+    margin: 15px 10px;
+}
+
+#nextEvents p {
+    background-color: black;
+    padding: 30px 15px;
+    text-align: center;
+    color: white;
+}
+
+#nextEvents > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#interests > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 15px;
+}
+
+#interests ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#interests ul li {
+    margin-right: 15px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#calendar h2, #calendar ul, #calendar p {
+    margin: 15px 10px;
+}
+
+#calendar h2 {
+    text-align: center;
+}
+
+#calendar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#calendar ul li {
+    margin-right: 10px;
+    padding: 10px;
+    border-right: #171616 1px solid;
 }
