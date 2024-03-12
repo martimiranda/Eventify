@@ -7,7 +7,7 @@ header */
     justify-content: space-around;
     align-items: center;
     margin: 0px 0px 20px;
-    padding: 15px;
+    padding: 25px 15px;
     background-color: #171616;
     color: white;
 }
@@ -25,7 +25,6 @@ header */
     transform: translateX(-50%); /* Centrar el footer exactamente en el centro */
     width: 100%;
     background-color: #171616;
-    padding: 20px;
     display: flex;
     justify-content: center;
 }
@@ -35,14 +34,14 @@ header */
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #bodyIndex footer ul li {
     display: inline-block;
     font-size: 12px;
     white-space: nowrap;
-    margin: 0 10px;
+    margin: 0;
 }
 
 #bodyIndex footer a {
@@ -52,6 +51,15 @@ header */
     align-items: center;
     text-decoration: none;
     color: white;
+    padding: 14px;
+}
+
+a[class='active'] {
+    background-color: darkblue;
+}
+
+.indicator {
+    display: none !important;
 }
 
 /* Home */
@@ -110,11 +118,59 @@ header */
 #calendar ul {
     display: flex;
     list-style: none;
+    justify-content: center;
+    align-items: center;
     padding: 0;
+    margin-bottom: 20px;
 }
 
 #calendar ul li {
     margin-right: 10px;
+}
+
+#calendar li:not(:last-child) {
     padding: 10px;
     border-right: #171616 1px solid;
+}
+
+#calendar li:first-child {
+    margin-left: 10px;
+}
+
+/* Connections */
+#conexiones {
+    margin: 10px;
+}
+
+#conexiones > div {
+    margin: 30px 10px;
+}
+
+#editGroups {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#editGroups h2, #conexiones p {
+    margin: 15px 10px;
+}
+
+#conexiones > p {
+    background-color: black;
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+#swipeGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+#swipeGroup h2 {
+    margin-bottom: 30px;
 }
