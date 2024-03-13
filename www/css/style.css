@@ -174,3 +174,95 @@ a[class='active'] {
 #swipeGroup h2 {
     margin-bottom: 30px;
 }
+
+/* Explore */
+#explorar {
+    margin: 10px;
+}
+
+#explorar > div {
+    margin: 30px 10px;
+}
+
+#search {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+#search input {
+    margin-left: 10px;
+    font-size: large;
+    border: none;
+    color: black;
+}
+
+#searchBar:focus {
+    outline: none;
+    border-color: transparent;
+}
+
+#editLocation > p {
+    padding: 30px 15px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#searchDate {
+    border-bottom: 1px solid black;
+}
+
+#searchDate h3 {
+    margin-bottom: 15px;
+}
+
+#searchDate ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#searchDate ul li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#searchDate ul li:nth-child(n+3) {
+    margin-right: 20px;
+}
+
+/* Messages */
+#mensajes {
+    margin: 10px;
+}
+
+#mensajes ul {
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#mensajes ul li {
+    margin-right: 10px;
+}
+
+#mensajes ul li a {
+    color: black;
+    font-weight: bold;
+}
+
+#mensajes ul li a[class='active'] {
+    background-color: red;
+}

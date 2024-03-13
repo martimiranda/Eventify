@@ -16,7 +16,16 @@
 
 <body id="bodyIndex">
     <header>
-        <a id="PremiumApp" href="#">==8</a>
+        <a id="PremiumApp" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-premium-rights">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                <path
+                    d="M13.867 9.75c-.246 -.48 -.708 -.769 -1.2 -.75h-1.334c-.736 0 -1.333 .67 -1.333 1.5c0 .827 .597 1.499 1.333 1.499h1.334c.736 0 1.333 .671 1.333 1.5c0 .828 -.597 1.499 -1.333 1.499h-1.334c-.492 .019 -.954 -.27 -1.2 -.75" />
+                <path d="M12 7v2" />
+                <path d="M12 15v2" />
+            </svg></a>
         <h1>Eventify</h1>
         <a id="profileIcon" href="#">T</a>
     </header>
@@ -66,7 +75,7 @@
         </div>
 
         <div id="explorar">
-            <div>
+            <div id="search">
                 <label for="searchBar"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -77,7 +86,10 @@
                     </svg></label>
                 <input type="text" id="searchBar" placeholder="Explorar eventos previstos">
             </div>
-            <p>Maps</p>
+            <div id="editLocation">
+                <h3>Buscar eventos cercanos, "Barcelona"</h3>
+                <p>Maps</p>
+            </div>
             <div id="searchDate">
                 <h3>Descubrir eventos por fecha</h3>
                 <ul>
@@ -99,13 +111,18 @@
         <div id="notificaciones">
             <h2>Notificaciones</h2>
         </div>
-        <div id="mensajes">
-            <h2>Mensajes</h2>
+        <div id="mensajes" class="col s12">
+            <ul class="tabs">
+                <li class="tab col"><a href="#chat-evento">CHAT DEL EVENTO</a></li>
+                <li class="tab col"><a href="#mensajes-directos">MENSAJES DIRECTOS</a></li>
+            </ul>
+            <div id="chat-evento" class="col s12">Contenido del chat del evento</div>
+            <div id="mensajes-directos" class="col s12">Contenido de los mensajes directos</div>
         </div>
     </main>
     <footer>
         <ul id="tabs-swipe-demo" class="tabs">
-            <li class="tab col s3"><a class="active" href="#home"><svg xmlns="http://www.w3.org/2000/svg"
+            <li class="tab col s2"><a class="active" href="#home"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-home-2" width="24" height="24" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -114,7 +131,7 @@
                         <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
                         <path d="M10 12h4v4h-4z" />
                     </svg>Inicio</a></li>
-            <li class="tab col s3"><a href="#conexiones"><svg xmlns="http://www.w3.org/2000/svg"
+            <li class="tab col s2"><a href="#conexiones"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-users-group" width="24" height="24" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -126,7 +143,7 @@
                         <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
                         <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
                     </svg>Conexiones</a></li>
-            <li class="tab col s3"><a href="#explorar"><svg xmlns="http://www.w3.org/2000/svg"
+            <li class="tab col s2"><a href="#explorar"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -134,7 +151,7 @@
                         <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                         <path d="M21 21l-6 -6" />
                     </svg>Explorar</a></li>
-            <li class="tab col s3"><a href="#notificaciones"><svg xmlns="http://www.w3.org/2000/svg"
+            <li class="tab col s2"><a href="#notificaciones"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-notification" width="24" height="24" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -142,7 +159,7 @@
                         <path d="M10 6h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
                         <path d="M17 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
                     </svg>Notificaciones</a></li>
-            <li class="tab col s3"><a href="#mensajes"><svg xmlns="http://www.w3.org/2000/svg"
+            <li class="tab col s2"><a href="#mensajes"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-message" width="24" height="24" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
                         stroke-linejoin="round">
