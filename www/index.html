@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src https://code.jquery.com https://fonts.gstatic.com 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src https://fonts.googleapis.com 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    content="default-src https://code.jquery.com https://fonts.gstatic.com 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval';
+    style-src https://fonts.googleapis.com 'self' 'unsafe-inline';
+    media-src *;
+    img-src 'self' data: content: https://www.paypalobjects.com;
+    script-src https://www.paypal.com https://code.jquery.com 'self' 'unsafe-inline';
+    frame-src https://www.sandbox.paypal.com/">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <script
+    src="https://www.paypal.com/sdk/js?client-id=Aal-hp4mA5d9dcPDrycLDIbyPt77-NSeCpsHKLcJBetUlZWosAwNYsNuTW0O-OUjZL3K3gL-MKHD8HO9"></script>
 </head>
 
 <body id="bodyIndex">
-    <header>
-        <a id="PremiumApp" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+    <header id="header">
+        <a id="PremiumApp" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-premium-rights">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -29,7 +36,7 @@
         <h1>Eventify</h1>
         <a id="profileIcon" href="#">T</a>
     </header>
-    <main>
+    <main id="main1">
         <div id="home">
             <div id="nextEvents">
                 <h2>Próximos eventos</h2>
@@ -120,7 +127,15 @@
             <div id="mensajes-directos" class="col s12">Contenido de los mensajes directos</div>
         </div>
     </main>
-    <footer>
+    <main id="mainPremium" style="display: none;">
+        <div id="topPremium">
+            <a id="backPremium"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg></a>
+            <h1>Eventify Premium</h1>
+        </div>
+        <div id="paypal-button-container">
+        </div>
+    </main>
+    <footer id="footer">
         <ul id="tabs-swipe-demo" class="tabs">
             <li class="tab col s2"><a class="active" href="#home"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-home-2" width="24" height="24" viewBox="0 0 24 24"
@@ -171,6 +186,9 @@
                     </svg>Mensajes</a></li>
         </ul>
     </footer>
+    <script>
+        paypal.Buttons().render('#paypal-button-container');
+    </script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
