@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy"
-    content="default-src https://code.jquery.com https://fonts.gstatic.com 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval';
+    <!-- <meta http-equiv="Content-Security-Policy" content="
+    default-src https://code.jquery.com https://fonts.gstatic.com 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' https://maps.googleapis.com;
     style-src https://fonts.googleapis.com 'self' 'unsafe-inline';
     media-src *;
     img-src 'self' data: content: https://www.paypalobjects.com;
     script-src https://www.paypal.com https://code.jquery.com 'self' 'unsafe-inline';
-    frame-src https://www.sandbox.paypal.com/">
+    frame-src https://www.sandbox.paypal.com;"> -->
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <script
-    src="https://www.paypal.com/sdk/js?client-id=Aal-hp4mA5d9dcPDrycLDIbyPt77-NSeCpsHKLcJBetUlZWosAwNYsNuTW0O-OUjZL3K3gL-MKHD8HO9"></script>
+        src="https://www.paypal.com/sdk/js?client-id=Aal-hp4mA5d9dcPDrycLDIbyPt77-NSeCpsHKLcJBetUlZWosAwNYsNuTW0O-OUjZL3K3gL-MKHD8HO9"></script>
 </head>
 
 <body id="bodyIndex">
@@ -34,7 +34,13 @@
                 <path d="M12 15v2" />
             </svg></a>
         <h1>Eventify</h1>
-        <a id="profileIcon" href=""><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg></a>
+        <a id="profileIcon" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            </svg></a>
     </header>
     <main id="main1">
         <div id="home">
@@ -94,8 +100,8 @@
                 <input type="text" id="searchBar" placeholder="Explorar eventos previstos">
             </div>
             <div id="editLocation">
-                <h3>Buscar eventos cercanos, "Barcelona"</h3>
-                <p>Maps</p>
+                <h3 id="button">Buscar eventos cercanos, "Barcelona"</h3>
+                <div id="mapDiv"></div>
             </div>
             <div id="searchDate">
                 <h3>Descubrir eventos por fecha</h3>
@@ -129,7 +135,14 @@
     </main>
     <main id="mainPremium" style="display: none;">
         <div id="topPremium">
-            <a id="backPremium"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg></a>
+            <a id="backPremium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l14 0" />
+                    <path d="M5 12l6 6" />
+                    <path d="M5 12l6 -6" />
+                </svg></a>
             <h1>Eventify Premium</h1>
         </div>
         <div id="paypal-button-container">
@@ -186,9 +199,8 @@
                     </svg>Mensajes</a></li>
         </ul>
     </footer>
-    <script>
-        paypal.Buttons().render('#paypal-button-container');
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNRHue0X2mlX6OXRZuQai5V9IAXb2TSLg&callback=initMap" async defer></script>
+    <script src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>

@@ -214,6 +214,11 @@ a[class='active'] {
     text-align: center;
 }
 
+#mapDiv {
+    width: 500px;
+    height: 500px;
+}
+
 #searchDate {
     border-bottom: 1px solid black;
 }
@@ -266,3 +271,4 @@ a[class='active'] {
 #mensajes ul li a[class='active'] {
     background-color: red;
 }
+
