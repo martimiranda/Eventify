@@ -39,7 +39,9 @@ function initMap() {
             getNearestCity(coords.lat, coords.lng)
                 .then(nearestCity => {
                     console.log('La ciudad más cercana es: ' + nearestCity);
-                    // Haz lo que necesites con la ciudad más cercana
+                    var cityInfo = document.getElementById("cityInput");
+
+                    cityInfo.textContent = nearestCity;
                 })
                 .catch(error => {
                     console.error('Error al obtener la ciudad más cercana:', error);
@@ -86,6 +88,28 @@ function initMap() {
         }
     });
 
+    function geocodeAddress(address, geocoder, map) {
+
+        marker.setMap(null);
+
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status === 'OK') {
+                // Obtener la ubicación del primer resultado
+                var location = results[0].geometry.location;
+                map.setCenter(location); // Centrar el mapa en la ubicación obtenida
+                map.setZoom(12); // Establecer el nivel de zoom del mapa
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: location
+                });
+
+                var cityInfo = document.getElementById("cityInput");
+
+                cityInfo.textContent = address;
+
+            }
+        });
+    }
 
 
 }
@@ -116,18 +140,3 @@ function getNearestCity(latitude, longitude) {
     });
 }
 
-function geocodeAddress(address, geocoder, map) {
-    geocoder.geocode({ 'address': address }, function (results, status) {
-        if (status === 'OK') {
-            // Obtener la ubicación del primer resultado
-            var location = results[0].geometry.location;
-            map.setCenter(location); // Centrar el mapa en la ubicación obtenida
-            map.setZoom(12); // Establecer el nivel de zoom del mapa
-            var marker = new google.maps.Marker({
-                map: map,
-                position: location
-            });
-        } else {
-        }
-    });
-}

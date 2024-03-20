@@ -62,7 +62,33 @@ a[class='active'] {
     display: none !important;
 }
 
+/* returnButton */
+#buttonReturn {
+    position: fixed;
+    bottom: 75px; /* Ajusta la distancia desde la parte inferior */
+    right: 18px; /* Ajusta la distancia desde la parte derecha */
+    z-index: 999; /* Asegura que esté sobre otros elementos */
+}
+
+#buttonReturn a {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: #007bff; /* Cambia el color de fondo según tus preferencias */
+    color: #ffffff; /* Cambia el color del texto según tus preferencias */
+    width: 100%; /* Haz que el botón ocupe todo el ancho del contenedor */
+    height: 100%; /* Haz que el botón ocupe todo el alto del contenedor */
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 7px; /* Ajusta el relleno del botón */
+}
+
 /* Home */
+.tabs-content {
+    overflow-y: scroll !important;
+  }
+
 #home {
     margin: 10px;
 }

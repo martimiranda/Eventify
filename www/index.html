@@ -42,8 +42,11 @@
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
             </svg></a>
     </header>
+    <div id="buttonReturn">
+        <a href="#header"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M18 11l-6 -6" /><path d="M6 11l6 -6" /></svg></a>
+    </div>
     <main id="main1">
-        <div id="home">
+        <div id="home" class="tabs-content">
             <div id="nextEvents">
                 <h2>Próximos eventos</h2>
                 <div>
@@ -75,7 +78,7 @@
             </div>
         </div>
 
-        <div id="conexiones">
+        <div id="conexiones" class="tabs-content">
             <div id="editGroups">
                 <h2>Tus Grupos</h2>
                 <a href="#">Editar</a>
@@ -87,7 +90,7 @@
             </div>
         </div>
 
-        <div id="explorar">
+        <div id="explorar" class="tabs-content">
             <div id="search">
                 <label for="searchBar"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24"
@@ -97,7 +100,7 @@
                         <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                         <path d="M21 21l-6 -6" />
                     </svg></label>
-                <input type="text" id="searchBar" placeholder="Explorar eventos previstos">
+                <input type="text" id="searchBar" placeholder="Explorar eventos">
             </div>
             <div id="editLocation">
                 <div>
@@ -124,10 +127,10 @@
                 <h3>Explorar Eventos</h3>
             </div>
         </div>
-        <div id="notificaciones">
+        <div id="notificaciones" class="tabs-content">
             <h2>Notificaciones</h2>
         </div>
-        <div id="mensajes" class="col s12">
+        <div id="mensajes" class="col s12 tabs-content">
             <ul class="tabs">
                 <li class="tab col"><a href="#chat-evento">CHAT DEL EVENTO</a></li>
                 <li class="tab col"><a href="#mensajes-directos">MENSAJES DIRECTOS</a></li>
@@ -202,7 +205,8 @@
                     </svg>Mensajes</a></li>
         </ul>
     </footer>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNRHue0X2mlX6OXRZuQai5V9IAXb2TSLg&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNRHue0X2mlX6OXRZuQai5V9IAXb2TSLg&callback=initMap"
+        async defer></script>
     <script src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
