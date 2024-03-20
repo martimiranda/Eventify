@@ -13,11 +13,17 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^12.0.1"
+    "cordova-android": "^12.0.1",
+    "nodemon": "^3.1.0"
   },
   "cordova": {
     "platforms": [
       "android"
     ]
+  },
+  "dependencies": {
+    "express": "^4.18.3",
+    "socket.io": "^4.7.4",
+    "ws": "^8.16.0"
   }
 }
